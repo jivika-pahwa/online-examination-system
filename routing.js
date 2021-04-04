@@ -1,0 +1,19 @@
+var app = angular.module('myapp',['ngRoute']);
+app.config(function($routeProvider){
+  $routeProvider
+  .when("/",{
+    templateUrl:'English.php'
+  })
+  .when("/Quantative",{
+    templateUrl:'Quantative.php'
+  })
+  .when('/Logical',{
+    templateUrl:"Logical.php"
+  })
+  .when('/Awareness',{
+    templateUrl:'Awareness.php'
+  })
+  .otherwise({
+    redirectTo:'/'
+  });
+})

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<link href="home.css" rel="stylesheet" type ="text/css" />
+<meta name="news" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<p id="date"></p>
+<!-- header -->
+<div class="img">
+<img src="dark-black.png" width="110%" height="86px" />
+<div class="top-left"><b>NEWS-TIMES</b></div>
+<div>
+<script>
+<!-- Date and weather -->
+document.getElementById("date").innerHTML=Date();
+function printy()
+{
+window.print();
+}
+</script>
+<body>
+<!-- Navigation Bar -->
+<div class="icon-bar">
+  <a href="index.html"><i class="fa fa-home"></i></a>
+  <a href="https://www.google.com/"><i class="fa fa-globe"></i></a>
+  <a href="#" onclick="printy()"><i class="fa fa-print"></i></a>
+  <a href="contactus.html"><i class="fa fa-phone"></i></a>
+ </div>
+ <div class="contact">
+ <center><b>Contact Us</b></center>
+ </div>
+
+ <div class="container">
+ <form method="post" action="mailto:jivika.pahwa.jiya@gmail.com" enctype="text/plain">
+ <div class="form-group">
+ <div id="content">
+ <label for="name">Name:</label>
+ <input type="text" name="name" class="form-control" placeholder="Enter your name" required="true" >
+ <label for="mail">Email:</label>
+ <input type="email" name="email" class="form-control" placeholder = "Enter you email" required="true">
+ <label for="complaint">Complaint:</label>
+ <textarea class="form-control" name="complaint" rows="3" placeholder="Your Complaint"></textarea>
+ <label for="feedback">Feedback:</label>
+ <textarea class="form-control" name ="feedback" rows="3" placeholder="Your Feedback"></textarea><br />
+ <button type="submit" class="btn btn-default">Submit</button>
+  <button type="reset" class="btn btn-default">Reset</button>
+ </div>
+ </div>
+ </form>
+ </div>
+
+ </body>
+</html>

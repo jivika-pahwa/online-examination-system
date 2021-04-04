@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      p{
+        color: lightblue;
+        font-size: 35px;
+        font-weight: bold;
+
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>CountDown Timer</h1>
+    <center>
+    <p id="timer"></p>
+        <script type="text/javascript">
+
+        var countDownDate = new Date("17 Aug 2020 16:05:10").getTime();
+
+        var x = setInterval(function(){
+
+          var now = new Date().getTime();
+          var distance = countDownDate - now ;
+          //document.write(distance);
+          var days = Math.floor(distance/(1000*24*60*60));
+          var hours = Math.floor((distance%(1000*24*60*60))/(1000*60*60));
+          var minutes = Math.floor((distance%(1000*60*60)) / (1000*60));
+          var seconds = Math.floor((distance%(1000*60)) / 1000);
+
+          document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+
+          if(distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = 'Time Up';
+            window.location.href = 'index.php';
+
+            }
+
+        },1000);
+
+
+        </script>
+  </body>
+</html>
